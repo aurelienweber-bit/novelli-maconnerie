@@ -7,9 +7,9 @@
 <style>
 /* Layout : chantier — bandes béton sombres et gris ciment, titres condensés en capitales, jaune chantier pour l'action, photos pleine largeur. */
 :root{
-  --concrete:#1B1D1C; --concrete-2:#262928; --cement:#E7E6E1; --cement-2:#D7D5CE; --paper:#F5F4F0;
-  --ink:#1B1D1C; --ink-2:#4B4F4C; --ink-3:#7D817D; --line:#CFCDC5; --line-dark:rgba(255,255,255,.14);
-  --yellow:#F2B230; --yellow-2:#DE9D16; --stone:#C8B48A;
+  --concrete:#2E2B27; --concrete-2:#3A3631; --cement:#EAE5DC; --cement-2:#DAD3C6; --paper:#F7F4EE;
+  --ink:#2E2B27; --ink-2:#56504A; --ink-3:#857D74; --line:#D5CDBF; --line-dark:rgba(255,255,255,.14);
+  --yellow:#D4B27A; --yellow-2:#C29D61; --stone:#C8B48A;
   --display:"Big Shoulders Display","Arial Narrow","Roboto Condensed",Impact,sans-serif;
   --body:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
   --gl:max(16px,env(safe-area-inset-left,0px)); --gr:max(16px,env(safe-area-inset-right,0px)); --wrap:1180px;
@@ -79,7 +79,7 @@ p{margin:0}
 /* Hero */
 .hero{position:relative;background:var(--concrete);color:#fff;overflow:hidden}
 .hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 50%}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(27,29,28,.95) 0%,rgba(27,29,28,.82) 42%,rgba(27,29,28,.3) 100%)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(46,43,39,.9) 0%,rgba(46,43,39,.72) 42%,rgba(46,43,39,.2) 100%)}
 .hero .wrap{position:relative;z-index:1;padding-block:clamp(64px,9vw,128px) clamp(56px,7vw,96px);display:grid;gap:22px}
 .hero .loc{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow)}
 .hero .loc svg{width:16px;height:16px}
@@ -110,7 +110,7 @@ p{margin:0}
 .svc-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
 .svc{position:relative;overflow:hidden;border-radius:4px;background:var(--concrete);color:#fff;min-height:340px;display:flex;align-items:flex-end;text-decoration:none}
 .svc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.svc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,29,28,0) 30%,rgba(27,29,28,.92) 100%)}
+.svc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(46,43,39,0) 30%,rgba(46,43,39,.92) 100%)}
 .svc:hover img{transform:scale(1.05)}
 .svc .in{position:relative;z-index:1;padding:26px;display:grid;gap:8px;max-width:46ch}
 .svc .no{font-family:var(--display);font-weight:800;font-size:.95rem;letter-spacing:.12em;color:var(--yellow)}
@@ -132,7 +132,7 @@ p{margin:0}
 /* Stone band */
 .stone{position:relative;color:#fff;background:var(--concrete);overflow:hidden}
 .stone img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.stone::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(27,29,28,.9),rgba(27,29,28,.55))}
+.stone::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(46,43,39,.9),rgba(46,43,39,.55))}
 .stone .wrap{position:relative;z-index:1;padding-block:clamp(72px,9vw,120px);display:grid;gap:18px;max-width:var(--wrap)}
 .stone h2{max-width:16ch}
 .stone h2 em{font-style:normal;color:var(--stone)}
@@ -184,7 +184,7 @@ p{margin:0}
 .bigtel b{display:block;font-family:var(--display);font-weight:900;font-size:2.2rem;line-height:1;letter-spacing:.02em}
 .bigtel small{color:rgba(255,255,255,.7);font-size:.88rem}
 .contact .note{margin-top:16px;color:var(--ink-2);font-size:.95rem}
-.panel{background:#fff;border-radius:4px;padding:clamp(20px,3vw,34px);box-shadow:0 30px 60px -40px rgba(27,29,28,.5)}
+.panel{background:#fff;border-radius:4px;padding:clamp(20px,3vw,34px);box-shadow:0 30px 60px -40px rgba(46,43,39,.5)}
 .tabs{display:flex;border-bottom:2px solid var(--cement-2);margin-bottom:24px}
 .tabs button{flex:1;border:0;background:transparent;padding:14px 10px;font-family:var(--display);font-weight:800;font-size:1.25rem;text-transform:uppercase;cursor:pointer;color:var(--ink-3);border-bottom:4px solid transparent;margin-bottom:-2px}
 .tabs button[aria-selected="true"]{color:var(--concrete);border-bottom-color:var(--yellow)}
@@ -396,7 +396,7 @@ p{margin:0}
           <button class="btn btn-dark" type="submit">Envoyer ma demande</button>
           <p class="fnote">Sans engagement.</p>
         </form>
-        <div class="success" id="quoteSuccess" aria-live="polite"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1D1C" stroke-width="2.6"><path d="M5 13l4 4L19 7"/></svg></span><h3>Demande bien préparée</h3><p>Mario Novelli vous recontacte pour organiser la visite.</p><p class="dnote">Maquette : aucun message n’a été envoyé. L’envoi réel sera activé lors de la mise en ligne.</p></div>
+        <div class="success" id="quoteSuccess" aria-live="polite"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#2E2B27" stroke-width="2.6"><path d="M5 13l4 4L19 7"/></svg></span><h3>Demande bien préparée</h3><p>Mario Novelli vous recontacte pour organiser la visite.</p><p class="dnote">Maquette : aucun message n’a été envoyé. L’envoi réel sera activé lors de la mise en ligne.</p></div>
       </div>
       <div id="paneRdv" role="tabpanel" hidden>
         <div id="booking">
@@ -418,7 +418,7 @@ p{margin:0}
               <div class="recap" id="recap"></div>
               <div class="bnav"><button class="btn btn-line" type="button" data-prev="2">Retour</button><button class="btn btn-yellow" type="submit">Confirmer</button></div>
             </form>
-            <div class="success" id="bookSuccess" aria-live="polite"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1D1C" stroke-width="2.6"><path d="M5 13l4 4L19 7"/></svg></span><h3>Rendez-vous demandé</h3><p id="bookRecapText"></p><p class="dnote">Maquette : le rendez-vous n’est pas réellement réservé.</p></div>
+            <div class="success" id="bookSuccess" aria-live="polite"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#2E2B27" stroke-width="2.6"><path d="M5 13l4 4L19 7"/></svg></span><h3>Rendez-vous demandé</h3><p id="bookRecapText"></p><p class="dnote">Maquette : le rendez-vous n’est pas réellement réservé.</p></div>
           </div>
         </div>
       </div>
